@@ -1,0 +1,38 @@
+[package]
+name = "expense-tracker"
+version = "1.0.0"
+description = "Navy Silhouette — offline-first Windows desktop expense tracker"
+authors = ["You"]
+edition = "2021"
+license = "MIT"
+rust-version = "1.77"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-sqlite = { version = "2", features = ["bundled-sqlcipher"] }
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[[bin]]
+name = "expense-tracker"
+path = "src/main.rs"
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = 3
+codegen-units = 1

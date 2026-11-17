@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Expense Tracker",
+  "version": "1.0.0",
+  "identifier": "com.expensetracker.app",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": null
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Expense Tracker",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 960,
+        "minHeight": 640,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": false,
+        "transparent": false,
+        "effects": {
+          "effect": "Mica",
+          "color": "#070D1E"
+        }
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon.png",
+      "icons/icon.ico",
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/32x32.ico",
+      "icons/128x128.ico",
+      "icons/256x256.png",
+      "icons/512x512.png"
+    ]
+  }
+}
