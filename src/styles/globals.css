@@ -1,0 +1,97 @@
+/* ======================================================
+   Expense Tracker — Navy Silhouette Design System
+   ====================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --navy-900: #070d1e;
+  --navy-800: #0a1430;
+  --navy-700: #0e1a38;
+  --navy-600: #12224a;
+  --navy-500: #1e3563;
+  --navy-400: #2a4578;
+  --navy-300: #3a5a96;
+  --ice-500: #1e3563;
+
+  --glass-bg: rgba(14, 26, 56, 0.8);
+  --glass-border: rgba(30, 53, 99, 0.4);
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-monospace: #cbd5e1;
+
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-modal: 0 8px 40px rgba(0, 0, 0, 0.6);
+
+  --transition-fast: 150ms ease;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--navy-900);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling for Webkit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy-800);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--navy-500);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--navy-400);
+}
+
+/* Utility classes */
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.text-monospace {
+  font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+  color: var(--text-monospace);
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.transition-fast {
+  transition: var(--transition-fast);
+}
+
+/* Focus outline for accessibility */
+:focus-visible {
+  outline: 2px solid var(--ice-500);
+  outline-offset: 2px;
+}
